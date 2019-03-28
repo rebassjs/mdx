@@ -1,34 +1,35 @@
-import { Head } from 'mdx-go'
-import { Container, Button } from 'rebass'
-import RebassMDX from '../src'
+import { Helmet } from 'react-helmet'
+import {
+  RebassMDX,
+  Styled,
+  Box,
+} from '../src'
+import Readme from '../README.md'
 
-export const Root = props =>
+```
+export default props =>
   <RebassMDX>
-    <Container>
+    <Box p={4}>
       {props.children}
-    </Container>
+    </Box>
   </RebassMDX>
-
-<Head>
-  <title>@rebass/mdx</title>
-</Head>
-
-# RebassMDX
-
-Component provider to pass styled Rebass components to MDX.
-
-```sh
-npm i @rebass/mdx
 ```
 
-<Button
-  is='a'
-  fontSize={2}
-  px={4}
-  py={3}
-  href='https://github.com/jxnblk/rebass/tree/master/mdx'>
-  GitHub
-</Button>
+export default RebassMDX.props({
+  styles: {
+    wrapper: {
+      outline: '4px solid magenta',
+    }
+  }
+})
+
+<Helmet>
+  <title>@rebass/mdx</title>
+</Helmet>
+
+<Readme />
+
+---
 
 ## Usage
 
@@ -47,7 +48,6 @@ export default props =>
 
 - `theme` add a custom [Rebass theme][]
 - `components` override specific components or add custom components to code fence examples
-- `props` props for [Rebass Markdown][] components to control styling
+- `styles` override component styles
 
-[Rebass theme]: http://jxnblk.com/rebass/theming
-[Rebass Markdown]: https://github.com/jxnblk/rebass/tree/master/markdown
+[Rebass theme]: https://rebassjs.org/theming

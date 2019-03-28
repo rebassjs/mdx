@@ -1,28 +1,28 @@
 {
   "name": "@rebass/mdx",
-  "version": "1.0.0",
-  "description": "MDX Provider for Rebass components",
+  "version": "2.0.0-0",
+  "description": "MDX Provider for styled components",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "babel src -d dist",
-    "start": "mdx-go docs -p 8989"
+    "start": "gx docs"
   },
   "keywords": [],
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/tag": "^0.15.0",
-    "@rebass/markdown": "^1.0.0",
-    "react-live": "^1.10.1",
-    "rebass": "^2.1.0",
-    "styled-components": "^3.3.3",
-    "styled-system": "^2.3.6"
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@mdx-js/mdx": "^1.0.0-alpha.10",
+    "@mdx-js/tag": "^1.0.0-alpha.6",
+    "@rebass/emotion": "^3.1.0",
+    "@styled-system/css": "^1.0.0",
+    "emotion-mdx": "^1.0.0-1",
+    "emotion-theming": "^10.0.10",
+    "rebass": "^3.1.0",
+    "styled-system": "^4.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "mdx-go": "^1.0.9"
+    "gx": "^2.0.0-19"
   }
 }
