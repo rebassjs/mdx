@@ -13,16 +13,28 @@ export const components = {
   ...Rebass,
 }
 
-export const RebassMDX = props =>
-  <ComponentProvider
-    {...props}
-    transform={css}
-  />
+export const RebassMDX = ({
+  wrap,
+  ...props
+}) => {
+  const children = wrap ? (
+    <Styled.wrapper>
+      {props.children}
+    </Styled.wrapper>
+  ) : props.children
+
+  return (
+    <ComponentProvider
+      {...props}
+      transform={css}
+      children={children}
+    />
+  )
+}
 
 RebassMDX.defaultProps = {
   components,
-  theme: base.theme,
-  styles: base.styles,
+  theme: base,
 }
 
 RebassMDX.props = defaults => props =>

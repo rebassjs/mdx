@@ -6,22 +6,10 @@ import {
 } from '../src'
 import Readme from '../README.md'
 
-```
 export default props =>
-  <RebassMDX>
-    <Box p={4}>
-      {props.children}
-    </Box>
+  <RebassMDX wrap>
+    {props.children}
   </RebassMDX>
-```
-
-export default RebassMDX.props({
-  styles: {
-    wrapper: {
-      outline: '4px solid magenta',
-    }
-  }
-})
 
 <Helmet>
   <title>@rebass/mdx</title>
@@ -47,7 +35,7 @@ export default props =>
 ### Props
 
 - `theme` add a custom [Rebass theme][]
+  - `theme.styles` override component styles
 - `components` override specific components or add custom components to code fence examples
-- `styles` override component styles
 
 [Rebass theme]: https://rebassjs.org/theming
