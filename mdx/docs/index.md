@@ -4,38 +4,24 @@ import {
   Styled,
   Box,
 } from '../src'
+import { Layout } from './components'
 import Readme from '../README.md'
+import Header from './header.mdx'
+import Footer from './footer.mdx'
 
-export default props =>
-  <RebassMDX wrap>
-    {props.children}
-  </RebassMDX>
+export default Layout
 
 <Helmet>
   <title>@rebass/mdx</title>
 </Helmet>
 
-<Readme />
-
----
-
-## Usage
-
-```jsx
-import React from 'react'
-import RebassMDX from '@rebass/mdx'
-import Document from './document.mdx
-
-export default props =>
-  <RebassMDX>
-    <Document />
-  </RebassMDX>
-```
-
-### Props
-
-- `theme` add a custom [Rebass theme][]
-  - `theme.styles` override component styles
-- `components` override specific components or add custom components to code fence examples
-
-[Rebass theme]: https://rebassjs.org/theming
+<Header />
+<Box
+  p={[ 3, 3, 4 ]}
+  mx='auto'
+  css={{
+    maxWidth: 1024,
+  }}>
+  <Readme />
+</Box>
+<Footer />
