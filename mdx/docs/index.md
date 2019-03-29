@@ -1,9 +1,6 @@
 import { Helmet } from 'react-helmet'
-import {
-  RebassMDX,
-  Styled,
-  Box,
-} from '../src'
+import { Box } from '@rebass/emotion'
+import RebassMDX from '../src'
 import { Layout } from './components'
 import Readme from '../README.md'
 import Header from './header.mdx'

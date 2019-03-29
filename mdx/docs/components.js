@@ -1,7 +1,7 @@
 import React from 'react'
 import SyntaxHighligher from 'react-syntax-highlighter'
 import { monokai as style } from 'react-syntax-highlighter/dist/styles/hljs'
-import { RebassMDX, Styled } from '../src'
+import RebassMDX from '../src'
 import themes from '../src/themes'
 
 const languages = {
