@@ -1,3 +1,6 @@
 docs
 src
 .babelrc
+babel.config.js
+test
+coverage
