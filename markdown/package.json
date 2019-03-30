@@ -24,14 +24,15 @@
     "@mdx-js/tag": "^0.11.0-0",
     "ava": "^0.25.0",
     "nyc": "^12.0.2",
-    "react-test-renderer": "^16.4.1",
-    "rebass": "^2.1.0",
-    "remark-autolink-headings": "^5.0.0",
-    "remark-slug": "^5.0.0",
-    "styled-components": "^3.3.2"
+    "react-test-renderer": "^16.8.6",
+    "rebass": "^2.3.4",
+    "remark-autolink-headings": "^5.1.0",
+    "remark-slug": "^5.1.1",
+    "styled-components": "^3.4.10"
   },
   "dependencies": {
-    "deepmerge": "^2.1.1",
+    "deepmerge": "^2.2.1",
+    "lodash.merge": "^4.6.1",
     "object-assign": "^4.1.1"
   }
 }

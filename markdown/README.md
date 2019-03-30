@@ -1,6 +1,8 @@
 
 # Rebass Markdown
 
+**DEPRECATED**
+
 Rebass to HTML component mappings with smart defaults for use in markdown
 
 ```sh
