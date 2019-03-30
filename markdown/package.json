@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "deepmerge": "^2.2.1",
+    "lodash.merge": "^4.6.1",
     "object-assign": "^4.1.1"
   }
 }
