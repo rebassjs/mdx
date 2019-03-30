@@ -16,7 +16,7 @@ export default Layout
 <Box
   p={[ 3, 3, 4 ]}
   mx='auto'
-  css={{
+  style={{
     maxWidth: 1024,
   }}>
   <Readme />

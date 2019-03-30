@@ -1,11 +1,14 @@
 
 # Rebass MDX
 
-MDX provider with for styled components
+⚛️#️⃣ MDX + Styled System + Emotion
 
 ```sh
 npm i @rebass/mdx
 ```
+
+Wrap your application with the `RebassMDX` provider component.
+All child MDX documents will receive component and theming context from this provider.
 
 ```jsx
 import React from 'react'
@@ -46,19 +49,25 @@ An additional `styles` object can be added to the `theme` object to apply styles
 ```js
 // example theme styles
 export default {
+  colors: {
+    primary: 'tomato',
+  },
   styles: {
     h1: {
-      color: 'tomato',
+      color: 'primary',
     }
   },
 }
 ```
 
-The `styles` object uses `@styled-system/css` so that core Styled System props can be mixed with CSS syntax.
+The `styles` object uses [@styled-system/css][] so that core Styled System props can be mixed with CSS syntax.
 
 ```js
 // example theme styles
 export default {
+  colors: {
+    primary: 'tomato',
+  },
   styles: {
     h1: {
       // using Styled System props
@@ -90,7 +99,7 @@ export default props =>
 
 - `base`: the default theme
 - `future`: theme with Avenir Next
-- `dark`: theme with Avenir Next
+- `dark`: dark mode theme
 
 ## Custom Components
 
@@ -142,27 +151,6 @@ export default props =>
       Hello
     </Styled>
   </Styled.wrapper>
-```
-
-## Rebass Components
-
-The 8 core Rebass components can also be imported for use.
-These components can optionally be styled with the [`themes.styles`](#styles) object.
-
-```jsx
-import React from 'react'
-import { Flex, Box } from '@rebass/mdx'
-
-export default props =>
-  <Flex>
-    <Box color='blue'>
-      Beep
-    </Box>
-    <Box mx='auto' />
-    <Box color='red'>
-      Boop
-    </Box>
-  </Flex>
 ```
 
 ## `useComponents` Hook
@@ -227,20 +215,14 @@ export default props =>
     - `components` override specific components or add custom components to code fence examples
 - `Styled`
 - `useComponents`
-- Rebass components:
-  - `Box`
-  - `Flex`
-  - `Text`
-  - `Heading`
-  - `Button`
-  - `Link`
-  - `Image`
-  - `Card`
 
 <!--
 - RebassMDX.props()
 - wrap prop
 -->
 
+MIT License
+
 [Rebass theme]: https://rebassjs.org/theming
 [styled system theme]: https://styled-system.com/theme-specification
+[@styled-system/css]: https://styled-system.com/css
