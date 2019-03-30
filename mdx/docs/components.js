@@ -2,7 +2,6 @@ import React from 'react'
 import SyntaxHighligher from 'react-syntax-highlighter'
 import { monokai as style } from 'react-syntax-highlighter/dist/styles/hljs'
 import RebassMDX from '../src'
-import themes from '../src/themes'
 
 const languages = {
   sh: 'shell',
@@ -17,7 +16,7 @@ const code = props => {
   const classnames = props.className.split(' ')
   const language = classnames.reduce((a, cn) => {
     if (!cn.includes('language-')) return a
-    const name = cn.replace(/^language\-/, '')
+    const name = cn.replace(/^language-/, '')
     return languages[name] || name
   }, null)
 
@@ -54,7 +53,6 @@ export const components = {
 }
 
 export const theme = {
-  // ...themes.future,
   styles: {
     inlineCode: {
       fontFamily: 'monospace',
