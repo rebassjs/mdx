@@ -1,4 +1,6 @@
 
+**DEPRECATED** See https://theme-ui.com
+
 # Rebass MDX
 
 ⚛️#️⃣ MDX + Styled System + Emotion
